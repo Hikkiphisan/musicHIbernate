@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -29,7 +30,7 @@ public class HibernateMusicService implements I_HibernateMusicService {
         }
     }
 
-    @Override
+    @Transactional
     public List<Song> findAll() {
         String queryStr = "SELECT s FROM Song AS s";
         TypedQuery<Song> query = entityManager.createQuery(queryStr, Song.class);

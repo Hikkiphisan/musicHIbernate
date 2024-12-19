@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Detail</title>
+</head>
+<body>
+<h1>Song Details</h1>
+<p><strong>Title:</strong> <span th:text="${song.title}">Song Title</span></p>
+<p><strong>Artist:</strong> <span th:text="${song.artist}">Song Artist</span></p>
+<p><strong>Album:</strong> <span th:text="${song.album}">Song Album</span></p>
+<p><strong>Year:</strong> <span th:text="${song.year}">Song Year</span></p>
+
+<a href="/songs">Back to List</a>
+</body>
+</html>

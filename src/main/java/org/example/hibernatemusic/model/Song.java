@@ -1,7 +1,5 @@
 package org.example.hibernatemusic.model;
 
-import org.hibernate.annotations.Entity;
-
 import javax.persistence.*;
 
 @Entity

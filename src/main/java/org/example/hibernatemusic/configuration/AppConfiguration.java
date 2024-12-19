@@ -26,9 +26,6 @@ import javax.persistence.EntityManagerFactory;
 
 @Configuration
 @EnableWebMvc
-@PropertySource("classpath:upload_file.properties")
-
-
 @ComponentScan("org.example.hibernatemusic.controller")
 public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAware {
     // ... các code hiện tại giữ nguyên ...
@@ -76,18 +73,17 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
     }
 
 
-    @Bean
-    public EntityManager entityManager(EntityManagerFactory entityManagerFactory) {
-        return entityManagerFactory.createEntityManager();
-    }
+//    @Bean
+//    public HibernateMusicService songService() {
+//        // Tạo mới một đối tượng HibernateMusicService
+//        return new HibernateMusicService();
+//    }
+
 
     @Bean
     public HibernateMusicService songService() {
-        // Tạo mới một đối tượng HibernateMusicService
         return new HibernateMusicService();
     }
-
-
 
 //    @Override
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
